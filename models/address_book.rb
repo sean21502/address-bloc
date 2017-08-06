@@ -47,8 +47,11 @@ require "csv"
         lower = mid + 1
       end
     end
-
-    return nil
-
+  return nil
   end
+  #assignment 8
+  def exterminate
+    @entries = []
+  end
+
 end
