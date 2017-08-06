@@ -26,21 +26,17 @@ class MenuController
          main_menu
        when 2
          system "clear"
-         entry_number
+         create_entry
          main_menu
        when 3
          system "clear"
-         create_entry
+         search_entries
          main_menu
        when 4
          system "clear"
-         search_entries
-         main_menu
-       when 5
-         system "clear"
          read_csv
          main_menu
-       when 6
+       when 5
          puts "Good-bye!"
          exit(0)
        else
@@ -59,21 +55,6 @@ class MenuController
 
      system "clear"
      puts "End of entries"
-   end
-
-   def entry_number
-     p "Which entry number would you like to view?"
-     number = gets.chomp.to_i
-
-     if number < @address_book.entries.count
-       puts @address_book.entries.(number)
-       puts "Press Enter to return"
-       gets.chomp
-       system "clear"
-     else
-       puts "Opps,#{number} not found"
-       number
-     end
    end
 
    def create_entry
